@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+body {
+    height: 100vh;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+header {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    background: url(f34eb2859538839217d3e4d9d3ec0184.jpg);
+    justify-content: center;
+    z-index:-1;
+    background-position: 100% 100%;
+    
+}
+.intro {
+    background-color: white;
+    height: 50%;
+    width: 80%;
+    border-radius: 1em;
+    display: flex;
+    align-self: center;
+    padding: 10px;
+
+}
+.textIntro {
+    text-align: center;
+    display: flex;
+    font-weight: bold;
+}
+
+.IcanBtn {
+    cursor: pointer;
+    border: 0;
+    border-radius: 0.8em;
+    width: 30%;
+    max-width: 40%;
+    height: 6%;
+    background: none;
+    font-size: 1.3rem;
+    position: absolute;
+    top:75%;
+    left: 35%;
+    right: 50%;
+    background: linear-gradient(to left,rgb(171, 235, 196),rgb(106, 204, 143),rgb(52, 230, 111));
+}
+.transition {
+    background-color: rgb(226, 255, 246);
+    width: 120%;
+    height: 60%;
+    position: absolute;
+    top:88%;
+    border-radius: 2em;
+    display: flex;
+    justify-content: center;
+}
+.aboutAff {
+    position: absolute;
+    width: 85%;
+    height: 100%;
+    max-width: 900px;
+
+    
+}
+.aboutAff  h1 {
+    font-size: 2.7rem;
+}
+.aboutAff p {
+    font-size: 1.3rem;
+}
+.pickAff {
+    background-color: rgb(106,204,143);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:135%; 
+}
+.pickAff h2 {
+    font-size: 1.5rem;
+}
+.pickAff div {
+    font-size: 2rem;
+
+
+}
+
+.pickAff button {
+    border-radius: 2em;
+    width: 13%;
+    height: 2em;
+    background: none;
+}
+.toggle {
+    border-radius: 4em;
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    height: 90%;
+}
+
+.submit button {
+    position: absolute;
+    top:170%;
+    width: 40%;
+    height: 10%;
+    color: white;
+    background:linear-gradient(rgb(233, 255, 242),rgb(187, 233, 211),rgb(174, 250, 225))
+}
