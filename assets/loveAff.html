@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loveAff.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="loveAffContainer">
+        <div class="pauseBtn">
+            <img class="pauseImg" src="pauseImg.png" alt="pause" loop>
+        </div>
+        <div class="songBtn">
+            <img class="songImg"src="noSound.png" alt="song">
+        </div>
+            <audio class="song" src="Slowly Until We Get There - Joey Pecoraro.mp3" loop></audio>
+        <div class="affirmations">
+            <div class="affText"></div>
+        </div>
+
+    </div>
+<script>
+
+ 
+    let affArray = ['I feel loved and cherished by my partner','I find it easy to draw healthy boundaries','I deserve love and affection','I\'m surrounded by love','I naturally find love everywhere','I\'m lovable','I connect with others easily','I only attract good and honest people','I\'m desirable','I\'m love and light','I love myself','I\'m in a wonderful relationship', 'I\'m open to love']
+    let phraseInterval = setInterval(function(){           
+        let randomAff = Math.floor(Math.random()* affArray.length)
+        document.querySelector('.affText').innerHTML = affArray[randomAff]
+    }, 3000);
+
+
+
+const soundBtn = document.querySelector(".songBtn")
+const playSong = document.querySelector(".song")   
+const pauseBtn = document.querySelector('.pauseImg')
+    pauseBtn.addEventListener('click',() => {
+        if (document.querySelector('.pauseImg').getAttribute("src") ==="playBtn.png") {
+            document.querySelector(".pauseImg").setAttribute('src',"pauseImg.png")
+            
+            let phraseInterval = setInterval(function(){           
+                let randomAff = Math.floor(Math.random()* affArray.length)
+                document.querySelector('.affText').innerHTML = affArray[randomAff]
+            }, 3000);
+        
+
+             
+        }      
+        else if (document.querySelector('.pauseImg').getAttribute("src") === "pauseImg.png") {
+            document.querySelector(".pauseImg").setAttribute('src',"playBtn.png")
+            playSong.pause()
+            document.querySelector(".songImg").getAttribute("src")
+            document.querySelector(".songImg").setAttribute('src',"noSound.png")
+            clearInterval(phraseInterval)
+            
+
+    
+        }
+    })
+    
+    
+
+    
+    
+    soundBtn.addEventListener('click',() => {
+        if (document.querySelector(".songImg").getAttribute("src") === "soundbtn.png") {
+            document.querySelector(".songImg").setAttribute('src',"noSound.png")
+            playSong.pause()
+        }
+        else {
+            document.querySelector(".songImg").setAttribute('src',"soundbtn.png")
+            playSong.play()
+            
+        }
+    })
+    
+
+
+
+
+</script>
+<script src="https://kit.fontawesome.com/59e0281a56.js" crossorigin="anonymous"></script>
+Icon by Fasil on freeicons.io
+Icon by Raj Dev on freeicons.io
+
+</body>
+    
+</html>

@@ -1,0 +1,16 @@
+
+.createAffContainer {
+    height: 100vh;
+    background-color: whitesmoke;
+    background: linear-gradient(to right);
+    font-size:25px;
+    
+}
+
+button {
+    background: linear-gradient(to right,rgb(226, 190, 235),rgb(253, 211, 245),rgb(230, 154, 217));
+    border-radius: 0.7em;
+    border: none;
+    width: 40%;
+    padding: 0.5em;
+}

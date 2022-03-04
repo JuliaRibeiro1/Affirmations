@@ -1,0 +1,5 @@
+.healthAffContainer {
+    height: 100vh;
+    background: linear-gradient(rgb(209, 240, 255),rgb(195, 255, 235),rgb(52, 168, 162));
+    background-size: 100% 100%;
+}

@@ -1,0 +1,133 @@
+
+body {
+    height: 100vh;
+    font-size: 2.5rem;
+    font-family:'Times New Roman', Times, serif;
+    background: linear-gradient(rgb(173, 238, 183),rgb(95, 209, 133),rgb(3, 59, 41));
+    display: flex;
+    justify-content: center;
+}
+.closeBtn {
+    background: none;
+    width: 10%;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    top:0%;
+    right: -85%;
+    
+}
+.aboutAff {
+    display: none;
+    margin-top: 5px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 1;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    background: url(3db44b346205d862f48bba33fc1fea2e.jpg);
+    opacity: 0.95;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.aboutAff  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+.aboutAff p {
+    font-size: 1.7rem;
+    width: 90%;
+}
+
+.pickAffContainer {
+    background-color: rgb(255, 254, 236);
+    margin-top: 0.5em;
+    height: 50%;
+    width: 80%;
+    border-radius: 0.4em;
+    padding: 0.2em;
+    height: 90%;
+    
+
+
+}
+.pickAffContainer h2 {
+    font-size: 1.5rem;
+}
+.pickAffContainer p {
+    font-size: 1rem;
+}
+.grid-display {
+    margin-top: 0.5em;
+    display: grid;
+    grid-template-columns: repeat(2,100px);
+    grid-column-gap: 0.3em;
+    grid-row-gap: 0.3em;
+    justify-content: center;
+
+}
+.pickBtn button {
+    border-radius: 2em;
+    width: 100%;
+    height: 7em;
+    border: 0;
+    font-size: 1.3rem;
+    border: none;
+    cursor: pointer;
+    
+}
+.startBtn {
+    cursor: pointer;
+    border: 0;
+    border-radius: 1.2em;
+    width: 85%;
+    max-width: 40%;
+    height: 6%;
+    background:linear-gradient(to left,rgb(255, 255, 255),rgb(212, 241, 219),rgb(203, 219, 210));
+    position: relative;
+    font-size: 1.1rem;
+    position: absolute;
+    left:33%;
+    top: 65%;;
+}
+.startBtn:hover {
+    background:linear-gradient(to left,rgb(255, 255, 255),rgb(233, 250, 237),rgb(226, 247, 235));
+
+}
+#loveBtn {
+    background: linear-gradient(rgb(255, 176, 202),rgb(241, 140, 149),rgb(208, 128, 228))
+}
+#loveBtn:hover {
+    background: linear-gradient(rgb(253, 194, 215),rgb(253, 180, 187),rgb(232, 175, 247));
+    transition: .6s ease-out;
+}
+#healthBtn {
+    background: linear-gradient(rgb(176, 237, 255),rgb(162, 235, 186),rgb(100, 175, 189))
+}
+#healthBtn:hover {
+    background: linear-gradient(rgb(218, 253, 249),rgb(203, 245, 218),rgb(167, 222, 231))
+}
+#sucessBtn {
+    background: linear-gradient(rgb(247, 255, 176),rgb(243, 255, 172),rgb(255, 225, 181))
+}
+#sucessBtn:hover {
+    background: linear-gradient(rgb(250, 255, 208),rgb(241, 252, 184),rgb(252, 231, 200))
+}
+ 
+#wealthBtn {
+    background: linear-gradient(rgb(226, 255, 179),rgb(185, 255, 120, 0.575),rgb(103, 238, 209))
+}
+#wealthBtn:hover {
+    background: linear-gradient(rgb(232, 255, 195),rgb(205, 255, 159, 0.575),rgb(133, 252, 222))
+}
+#createBtn {
+    background: linear-gradient(rgb(200,200,200),rgb(200,200,200),rgb(200,100,200));
+    width: 200px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
