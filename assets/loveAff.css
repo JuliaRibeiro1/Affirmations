@@ -1,7 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    }
+body {
+    background: url(background-train.jpg);
+    background-size: 100% 100%;
+    object-fit: cover;
+}
+
 .loveAffContainer {
     height: 100vh;
-    background: linear-gradient(rgb(255, 172, 172),rgb(226, 131, 171),rgb(214, 81,226));
-    background-size: 100% 100%;
+   /* background: linear-gradient(rgb(255, 172, 172),rgb(226, 131, 171),rgb(214, 81,226));*/
+    
     display: flex;
     font-size: 30px;
     display: flex;
@@ -27,4 +37,8 @@
 }
 .affText {
     width: 100%;
+}
+.pauseBtn {
+    position: absolute;
+    top: 50%;
 }

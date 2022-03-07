@@ -8,25 +8,23 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="createAffContainer">
-        <input type="text" name="" id="" placeholder="type your affirmations">
-        <button>Add affirmation</button>
-        <div class="textBox">
-            <div class="text">
-                
+     <div class="alert">You should separate every affirmation with comma. Example: I love myself, I love my life, I love being alive.</div>
+     <div class="createAffContainer">
+                <textarea name="text" id="" cols="30" rows="10" class="textArea"></textarea>
+                <button>Add affirmation</button>
+                <div class=nextBtn><img src="nextbtn.png" alt="next button"></div>
             </div>
-        </div>
-    </div>
+        
     
-</body>
+
     <script>
+
     
     const textBox = document.querySelector(".textBox")
-    let text = document.querySelector(".text")
     const button = document.querySelector("button")
     button.addEventListener('click',function () {
-    const aff = document.querySelector("input").value
-        if(document.querySelector('input').value === "") {
+    const aff = document.querySelector(".textArea").value
+        if(document.querySelector('.textArea').value === "") {
             alert("type an aff")
         }
         else {
@@ -35,7 +33,7 @@
             text.style.display="flex"
             document.querySelector("input").value ="" */
            
-            let affValue = document.querySelector("input").value.split(",")
+            let affValue = document.querySelector(".textArea").value.split(",")
             
             
             console.log(affValue)
@@ -47,5 +45,5 @@
 
     })
     </script>
-
+</body>
 </html>

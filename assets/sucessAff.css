@@ -1,4 +1,45 @@
-.sucessAffContainer {
+* {
+    margin: 0;
+    padding: 0;
+    }
+body {
+    background: url(backgrond-lake.jpg);
+    background-size: 100% 100%;
+    object-fit: cover;
     height: 100vh;
-    background: linear-gradient(rgb(255, 251, 216),rgb(252, 247, 160),rgb(255, 192, 120));
+}
+
+.wealthAffContainer {
+    
+   /* background: linear-gradient(rgb(255, 172, 172),rgb(226, 131, 171),rgb(214, 81,226));*/
+    
+    display: flex;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.affirmations {
+    border-radius: 2em;
+    position: absolute;
+    top:30%;
+    width: fit-content;
+    background-color: rgb(238, 255, 255);
+    height: fit-content;
+    padding: 0.5em;
+    font-size: 20px;
+    text-align: center;
+}
+.songBtn {
+    width: 10%;
+    position: absolute;
+    top:3%;
+    right:0%;
+}
+.affText {
+    width: 100%;
+}
+.pauseBtn {
+    position: absolute;
+    top: 50%;
 }

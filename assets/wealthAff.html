@@ -9,9 +9,17 @@
 </head>
 <body>
     <div class="wealthAffContainer">
+        <div class="pauseBtn">
+            <img class="pauseImg" src="pauseImg.png" alt="pause" loop>
+        </div>
+        <div class="songBtn">
+            <img class="songImg"src="noSound.png" alt="song">
+        </div>
+            <audio class="song" src="Slowly Until We Get There - Joey Pecoraro.mp3" loop></audio>
         <div class="affirmations">
             <div class="affText"></div>
         </div>
+
     </div>
     <script>
         let affArray = ['Wealth constantly flows into my life','My actions create constant wealth, prosperity, and abundance','Prosperity flows to and through me','I accept and receive unexpected money','I deserve to make more money','I am open to receiving all wealth life brings to me','It\'s easy and natural for me to be prosperous and successful','I am always discovering new sources of income','I experience wealth as a key part of my life','I love being rich','I have more than enough money','I can buy everything I desire', 'I attract money']
@@ -19,6 +27,42 @@
         let randomAff = Math.floor(Math.random()* affArray.length)
         document.querySelector('.affText').innerHTML = affArray[randomAff]
         }, 3000); 
+        const soundBtn = document.querySelector(".songBtn")
+        const playSong = document.querySelector(".song")   
+        const pauseBtn = document.querySelector('.pauseImg')
+
+    pauseBtn.addEventListener('click',() => {
+        if (document.querySelector('.pauseImg').getAttribute("src") ==="playBtn.png") {
+            document.querySelector(".pauseImg").setAttribute('src',"pauseImg.png")
+            document.querySelector(".affirmations").style.display = "flex"
+             
+        }      
+        else {
+            document.querySelector(".pauseImg").setAttribute('src',"playBtn.png")
+            document.querySelector(".songImg").setAttribute('src',"noSound.png")
+            playSong.pause()
+            document.querySelector(".affirmations").style.display = "none"
+
+        }
+    })
+    
+    soundBtn.addEventListener('click',() => {
+        if (document.querySelector(".songImg").getAttribute("src") === "soundbtn.png") {
+            document.querySelector(".songImg").setAttribute('src',"noSound.png")
+            playSong.pause()
+        }
+        else {
+            document.querySelector(".songImg").setAttribute('src',"soundbtn.png")
+            playSong.play()
+            
+        }
+    })
+    
+
+
+
+
+</script>
     </script>
 </body>
 </html>

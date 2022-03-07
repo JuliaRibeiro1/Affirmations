@@ -1,11 +1,17 @@
 
 body {
-    height: 100vh;
+    height: 130vh;
+    
     font-size: 2.5rem;
     font-family:'Times New Roman', Times, serif;
-    background: linear-gradient(rgb(173, 238, 183),rgb(95, 209, 133),rgb(3, 59, 41));
+    background:url(background-gradient.jpg);
     display: flex;
     justify-content: center;
+    background-size: 100% 110%;
+    
+    background-repeat: no-repeat;
+    
+    
 }
 .closeBtn {
     background: none;
@@ -22,7 +28,7 @@ body {
     margin-top: 5px;
     width: 100%;
     height: 100%;
-    background-color: white;
+    
     z-index: 1;
     color: rgb(0, 0, 0);
     position: absolute;
@@ -36,7 +42,7 @@ body {
 }
 
 .aboutAff  h1 {
-    font-size: 2.5rem;
+    font-size: 1.6rem;
     text-align: center;
 }
 .aboutAff p {
@@ -45,19 +51,24 @@ body {
 }
 
 .pickAffContainer {
-    background-color: rgb(255, 254, 236);
+    
     margin-top: 0.5em;
     height: 50%;
     width: 80%;
-    border-radius: 0.4em;
+    
     padding: 0.2em;
-    height: 90%;
+    height: 100%;
+    
     
 
 
 }
+
 .pickAffContainer h2 {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
+    color: white;
+    width: 100%;
+    text-align: center;
 }
 .pickAffContainer p {
     font-size: 1rem;
@@ -67,8 +78,12 @@ body {
     display: grid;
     grid-template-columns: repeat(2,100px);
     grid-column-gap: 0.3em;
-    grid-row-gap: 0.3em;
+    grid-row-gap: 0.5em;
     justify-content: center;
+    margin-top:4em;
+    margin-top: 5%;
+    
+    
 
 }
 .pickBtn button {
@@ -77,8 +92,9 @@ body {
     height: 7em;
     border: 0;
     font-size: 1.3rem;
-    border: none;
+    border:0.01em solid rgb(250, 250, 250);
     cursor: pointer;
+    box-shadow: 0.05px 0.05px 2px;
     
 }
 .startBtn {
@@ -86,14 +102,17 @@ body {
     border: 0;
     border-radius: 1.2em;
     width: 85%;
-    max-width: 40%;
-    height: 6%;
+    
+    height: 4%;
     background:linear-gradient(to left,rgb(255, 255, 255),rgb(212, 241, 219),rgb(203, 219, 210));
     position: relative;
+    top: 4%;
+    left:10%;
     font-size: 1.1rem;
-    position: absolute;
-    left:33%;
-    top: 65%;;
+
+
+    
+
 }
 .startBtn:hover {
     background:linear-gradient(to left,rgb(255, 255, 255),rgb(233, 250, 237),rgb(226, 247, 235));
@@ -126,8 +145,7 @@ body {
     background: linear-gradient(rgb(232, 255, 195),rgb(205, 255, 159, 0.575),rgb(133, 252, 222))
 }
 #createBtn {
-    background: linear-gradient(rgb(200,200,200),rgb(200,200,200),rgb(200,100,200));
-    width: 200px;
-    grid-column-start: 1;
-    grid-column-end: 2;
+    background: linear-gradient(rgb(200,200,200),rgb(200,200,200),rgb(212, 148, 212));
+    width: 210px;
+    
 }
