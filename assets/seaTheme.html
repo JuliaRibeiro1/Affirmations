@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="iconPage.png" type="image/x-icon">
     <link rel="stylesheet" href="affContainer.css">
+    
     <title>Document</title>
 </head>
 <body>
@@ -21,21 +22,23 @@
             <div class="affText"></div>
         </div>
 
-    </div>
+    </div>  
 <style>
-    body {
-        background: url(backgrond-lake.jpg);
-        background-size: 100% 100%;
-        object-fit: cover;
-        }
+
+body {
+    background: url(background-sea-blue.jpg);
+    background-size: 100% 100%;
+    object-fit: cover;
+    height: 100vh;
+}
 </style>
 <script>
-    let affArray = ['I am succeeding in life','I know I can achieve anything I want in life','Prosperity flows to and through me','I will succeed by attracting people who can help me','I am happy with who I am and can be','I believe in myself','I am capable of achieving greatness','I achieve whatever I set my mind to','I believe that I can do anything','I easily accomplish all of my goals',' I know I can achieve anything I want in life','I am open to limitless possibilities', 'I am a strong individual who attracts success and happiness']
-    setInterval(function(){           
-    let randomAff = Math.floor(Math.random()* affArray.length)
-    document.querySelector('.affText').innerHTML = affArray[randomAff]
+let affValue = localStorage.getItem("aff").split(",")
+setInterval(function(){           
+    let randomAff = Math.floor(Math.random() * affValue.length)
+    document.querySelector('.affText').innerHTML = affValue[randomAff]
     }, 3000); 
-    
+
 </script>
 <script src="pauseAndsong.Btn.js"></script>
 </body>

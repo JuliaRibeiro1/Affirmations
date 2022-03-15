@@ -4,45 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="iconPage.png" type="image/x-icon">
     <link rel="stylesheet" href="createAff.css">
     <title>Document</title>
 </head>
 <body>
-     <div class="alert">You should separate every affirmation with comma. Example: I love myself, I love my life, I love being alive.</div>
+     <div class="alert">
+         <div class="closeBtn"><img src="removeBtn.png" alt="close"></div>
+         <div class="notebookImg"><img src="notebook.png" alt="notebook image"></div>
+         <p>You should separate every affirmation with comma. Example: I love myself, I love my life, I love being alive. Don't forget to pick the theme you like and click on submit button!</p>
+    </div>
      <div class="createAffContainer">
-                <textarea name="text" id="" cols="30" rows="10" class="textArea"></textarea>
-                <button>Add affirmation</button>
-                <div class=nextBtn><img src="nextbtn.png" alt="next button"></div>
+                <div class="firstStep">
+                    <textarea name="text" id="" cols="30" rows="10" class="textArea"></textarea>
+                    <button class="addAffBtn">Add affirmation</button>
+                </div>
+                <div class="secondStep">
+                    <h1>Pick a theme</h1>
+                    <button class="pickTheme" id="seaTheme">Sea</button>
+                    <button class="pickTheme" id="mountainsTheme">Mountains</button>
+                    <button class="pickTheme" id="woodsTheme">Woods</button>
+                    <button class="pickTheme" id="trainTheme">Train</button>
+                    <button class="startBtn">START</button>
+                </div>
             </div>
         
     
 
     <script>
-
-    
+    var affValue;
+    const startBtn = document.querySelector(".startBtn")
+    const addAffBtn = document.querySelector(".addAffBtn")
+    const closeBtn = document.querySelector(".closeBtn")
     const textBox = document.querySelector(".textBox")
-    const button = document.querySelector("button")
-    button.addEventListener('click',function () {
+    const buttonAdd = document.querySelector(".addAffBtn")
+  //FirstStep (type affirmations)
+    buttonAdd.addEventListener('click',function () {
     const aff = document.querySelector(".textArea").value
         if(document.querySelector('.textArea').value === "") {
             alert("type an aff")
+
         }
         else {
-           /* let splitAff = aff.split("  ")
-            text.innerHTML = text.innerHTML + "</br>" + "</br>" + splitAff
-            text.style.display="flex"
-            document.querySelector("input").value ="" */
-           
-            let affValue = document.querySelector(".textArea").value.split(",")
-            
-            
-            console.log(affValue)
-            
-
-
-
+            affValue = document.querySelector(".textArea").value
+            localStorage.setItem('aff',affValue);
+            //console.log(affValue)
+            addAffBtn.addEventListener('click',function() {
+            document.querySelector(".firstStep").style.display = "none"
+            document.querySelector(".secondStep").style.display = "block"
+            buttonAdd.style.cssText = "width:10%;border-radius:50%;transition:2s"
+            buttonAdd.innerText = "1"
+        })
         }
 
+    })
+    localStorage.setItem('aff',affValue);
+    
+    document.querySelector("#seaTheme").addEventListener('click',function(){
+        startBtn.addEventListener('click',function() {
+        location.href = "seaTheme.html"
+       
+    })
+})
+document.querySelector("#mountainsTheme").addEventListener('click',function(){
+        startBtn.addEventListener('click',function() {
+        location.href = "mountainsTheme.html"
+    })
+})
+document.querySelector("#woodsTheme").addEventListener('click',function(){
+        startBtn.addEventListener('click',function() {
+        location.href = "woodsTheme.html"
+    })
+})
+document.querySelector("#trainTheme").addEventListener('click',function(){
+        startBtn.addEventListener('click',function() {
+        location.href = "trainTheme.html"
+    })
+})
+    //Alert 
+    closeBtn.addEventListener('click',function() {
+        document.querySelector(".alert").style.display = "none"
     })
     </script>
 </body>

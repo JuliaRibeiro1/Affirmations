@@ -21,22 +21,28 @@
             <div class="affText"></div>
         </div>
 
-    </div>
+    </div> 
 <style>
     body {
-        background: url(backgrond-lake.jpg);
-        background-size: 100% 100%;
+        background: url(background-cabin.jpg);
         object-fit: cover;
+        width: 100%;
+        height: 100vh;
+
         }
+        
 </style>
+        
 <script>
-    let affArray = ['I am succeeding in life','I know I can achieve anything I want in life','Prosperity flows to and through me','I will succeed by attracting people who can help me','I am happy with who I am and can be','I believe in myself','I am capable of achieving greatness','I achieve whatever I set my mind to','I believe that I can do anything','I easily accomplish all of my goals',' I know I can achieve anything I want in life','I am open to limitless possibilities', 'I am a strong individual who attracts success and happiness']
+    let affValue = localStorage.getItem("aff").split(",")
     setInterval(function(){           
-    let randomAff = Math.floor(Math.random()* affArray.length)
-    document.querySelector('.affText').innerHTML = affArray[randomAff]
-    }, 3000); 
-    
+        let randomAff = Math.floor(Math.random() * affValue.length)
+        document.querySelector('.affText').innerHTML = affValue[randomAff]
+        }, 3000); 
+        
 </script>
 <script src="pauseAndsong.Btn.js"></script>
+        
+        
 </body>
 </html>

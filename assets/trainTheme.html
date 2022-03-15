@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="iconPage.png" type="image/x-icon">
     <link rel="stylesheet" href="affContainer.css">
     <title>Document</title>
 </head>
@@ -21,23 +20,27 @@
             <div class="affText"></div>
         </div>
 
-    </div>
-
+    </div> 
 <style>
-    body {
-    background: url(background-sun.jpg);
+body {
+    background: url(background-train.jpg);
     background-size: 100% 100%;
     object-fit: cover;
-    }
+    height: 100vh;
+}
+
 </style>
 
 <script>
-    let affArray = ['Wealth constantly flows into my life','My actions create constant wealth, prosperity, and abundance','Prosperity flows to and through me','I accept and receive unexpected money','I deserve to make more money','I am open to receiving all wealth life brings to me','It\'s easy and natural for me to be prosperous and successful','I am always discovering new sources of income','I experience wealth as a key part of my life','I love being rich','I have more than enough money','I can buy everything I desire', 'I attract money']
-    setInterval(function(){           
-    let randomAff = Math.floor(Math.random()* affArray.length)
-    document.querySelector('.affText').innerHTML = affArray[randomAff]
+let affValue = localStorage.getItem("aff").split(",")
+setInterval(function(){           
+    let randomAff = Math.floor(Math.random() * affValue.length)
+    document.querySelector('.affText').innerHTML = affValue[randomAff]
     }, 3000); 
+
 </script>
 <script src="pauseAndsong.Btn.js"></script>
+
+
 </body>
 </html>

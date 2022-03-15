@@ -24,21 +24,17 @@ body {
     
 }
 .aboutAff {
-    display: none;
-    margin-top: 5px;
-    width: 100%;
-    height: 100%;
-    
+    background-color: rgb(255, 255, 255);
+    height: 35%;
+    width:80%;
     z-index: 1;
-    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
     position: absolute;
-    right: 0%;
-    top: 0%;
-    background: url(3db44b346205d862f48bba33fc1fea2e.jpg);
-    opacity: 0.95;
+    top: 20%;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    text-align: justify;
+    justify-content: center;
+    border: rgb(156, 156, 156) 1px solid;
 }
 
 .aboutAff  h1 {

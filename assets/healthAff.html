@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="healthAff.css">
+    <link rel="shortcut icon" href="iconPage.png" type="image/x-icon">
+    <link rel="stylesheet" href="affContainer.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="healthAffContainer">
+    <div class="container">
         <div class="pauseBtn">
             <img class="pauseImg" src="pauseImg.png" alt="pause" loop>
         </div>
@@ -21,48 +22,20 @@
         </div>
 
     </div>
-    <script>
-        let affArray = ['I have abundant energy.','I love and respect my body','I feel my best when I\'m active','My body is healed','I feel good in my body',' I am a vision of good health and vitality.','I make choices that bring me energy and vitality','I fill my body and mind with positive thoughts','My body and mind are always striving for perfect health.','I make time to tend to and care for my body.','I love seeing how healthy habits improve my life','I am committed to being my best, healthiest self', 'I accept help and support on my wellness journey']
-        setInterval(function(){           
-        let randomAff = Math.floor(Math.random()* affArray.length)
-        document.querySelector('.affText').innerHTML = affArray[randomAff]
-        }, 3000); 
-        const soundBtn = document.querySelector(".songBtn")
-        const playSong = document.querySelector(".song")   
-        const pauseBtn = document.querySelector('.pauseImg')
-
-    pauseBtn.addEventListener('click',() => {
-        if (document.querySelector('.pauseImg').getAttribute("src") ==="playBtn.png") {
-            document.querySelector(".pauseImg").setAttribute('src',"pauseImg.png")
-            document.querySelector(".affirmations").style.display = "flex"
-             
-        }      
-        else {
-            document.querySelector(".pauseImg").setAttribute('src',"playBtn.png")
-            document.querySelector(".songImg").setAttribute('src',"noSound.png")
-            playSong.pause()
-            document.querySelector(".affirmations").style.display = "none"
-
-        }
-    })
-    
-    soundBtn.addEventListener('click',() => {
-        if (document.querySelector(".songImg").getAttribute("src") === "soundbtn.png") {
-            document.querySelector(".songImg").setAttribute('src',"noSound.png")
-            playSong.pause()
-        }
-        else {
-            document.querySelector(".songImg").setAttribute('src',"soundbtn.png")
-            playSong.play()
-            
-        }
-    })
-    
-
-
-
-
+<style>
+    body {
+    background: url(background-sea-blue.jpg);
+    background-size: 100% 100%;
+    object-fit: cover;
+    }
+</style>
+<script>
+    let affArray = ['I have abundant energy.','I love and respect my body','I feel my best when I\'m active','My body is healed','I feel good in my body',' I am a vision of good health and vitality.','I make choices that bring me energy and vitality','I fill my body and mind with positive thoughts','My body and mind are always striving for perfect health.','I make time to tend to and care for my body.','I love seeing how healthy habits improve my life','I am committed to being my best, healthiest self', 'I accept help and support on my wellness journey']
+    setInterval(function(){           
+    let randomAff = Math.floor(Math.random()* affArray.length)
+    document.querySelector('.affText').innerHTML = affArray[randomAff]
+    }, 3000); 
 </script>
-    </script>
+<script src="pauseAndsong.Btn.js"></script>
 </body>
 </html>

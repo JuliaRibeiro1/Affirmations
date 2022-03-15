@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="iconPage.png" type="image/x-icon">
+    <link rel="stylesheet" href="affContainer.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="pauseBtn">
+            <img class="pauseImg" src="pauseImg.png" alt="pause" loop>
+        </div>
+        <div class="songBtn">
+            <img class="songImg"src="noSound.png" alt="song">
+        </div>
+            <audio class="song" src="Slowly Until We Get There - Joey Pecoraro.mp3" loop></audio>
+        <div class="affirmations">
+            <div class="affText"></div>
+        </div>
+
+    </div> 
+    <style>
+        body {
+            background: url(background-mountais.jpg);
+            background-size: 100% 80%;
+            object-fit: cover;
+            height: 100vh;
+        }
+        
+        </style>
+        
+        <script>
+        let affValue = localStorage.getItem("aff").split(",")
+        setInterval(function(){           
+            let randomAff = Math.floor(Math.random() * affValue.length)
+            document.querySelector('.affText').innerHTML = affValue[randomAff]
+            }, 3000); 
+        
+        </script>
+<script src="pauseAndsong.Btn.js"></script>      
+
+</body>
+</html>

@@ -4,19 +4,98 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/iconPage.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/style.css">
     <title>Affirmations</title>
 </head>
 <body>
-    <header>
-        <div class="intro">
-            <p class="textIntro">"Whether you think you can or you think you can't, you are right." <br> -Henry Ford </p>
-            <a href="assets/pickAff.html"><button class="IcanBtn">I CAN</button></a>
-        </div> 
-        
-    </header>
+   <nav>
+        <button>About us</button>
+        <button>Contact us</button>
+        <button class="specialBtn">Learn more</button>
+        <button class="listBtn"><img src="assets/list3.png" alt="list"></button>
+   </nav>
+       <header>
+           <div class="list">
+               <button>Home</button>
+               <button>Contact us</button>
+               <button>About us</button>
+           </div>
+            <div class="intro">
+                <p class="textIntro">"Whether you think you can or you think you can't, you are right." <br> <span>-Henry Ford</span></p>
+                <a href="assets/pickAff.html"><button class="IcanBtn">I CAN</button></a>
+            </div>
+        </header>
+       <div class="learnMore">
+            <div class="image"><img src="assets/—Pngtree—blue neon gradient fluid text_6228322.png" alt="phone number"></div>
+            <div class="text">
+                <h1>What's affirmations?</h1>
+                <p id="text1">Affirmations are positive statements that can help you to challenge and overcome            self-sabotaging  and negative thoughts. When you repeat them often, and believe in them, you   start to make positive changes.
 
+                <p id="text2">You might consider affirmations to be unrealistic "wishful thinking." But try looking at positive affirmations this way: many of us do repetitive exercises to improve our physical health, and affirmations are like exercises for our mind and outlook. These positive mental repetitions can reprogram our thinking patterns so that, over time, we begin to think – and act – differently.</p>
+                    
+                <p id="text3">For example, evidence suggests that affirmations can help you to perform better at work. According to researchers, spending just a few minutes thinking about your best qualities before a high-pressure meeting – a performance review, for example – can calm your nerves, increase your confidence, and improve your chances of a successful outcome. </p>
+            </div>
+        </div>
+        <footer>
+            
+            <div>
+                <ul>
+                    <li>Home</li>
+                    <li>About us</li>
+                    <li>Contact us</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><img src="assets/phoneImg.png" alt="phone number">010101-010101</li>
+                    <li><img src="assets/emailImg.png" alt="email address">loremlorem@lorem.com</li>
+                    <li><img src="assets/locationImg.png" alt="location">Lorem ipsum dolor sit,986,Lorem ipsum.</li>
+                </ul>
+            </div>
+            <div class="social">
+                    <img src="assets/mediaIcin.png" alt="twitter">
+                    <img src="assets/socialIcon.png" alt="facebook">
+                    <img src="assets/socialmediaIcon.png" alt="instagram">
+            </div>
+        </footer>
       
-<script src="assets/index.js"></script>
+<script>
+
+function fadeText() {
+       if(window.scrollY === 0){
+        document.querySelector(".textIntro").style.cssText = "color:black;transition:2s"
+    }
+       else {
+        document.querySelector(".textIntro").style.cssText = "color:;"
+       }
+}
+function transitionText() {
+        if(window.scrollY > 400) {
+            document.querySelector("#text1").style.cssText = "transform:-50%,-50%;color:black;transition:2s"
+            document.querySelector("#text2").style.cssText = "transform:-50%,-50%;color:black;transition:2s"  
+            document.querySelector("#text3").style.cssText = "transform:-50%,-50%color:black;transition:2s"
+            
+            
+        
+    }
+    else {
+            document.querySelector("#text1").style.cssText = "transform:translate(10%);color:white;transition:2s"
+            document.querySelector("#text2").style.cssText = "transform:translate(10%);color:white;transition:2s"  
+            document.querySelector("#text3").style.cssText = "transform:translate(10%);color:white;transition:2s"
+    }
+
+}
+document.querySelector('.listBtn').addEventListener('click',() => {
+    document.querySelector('.list').style.display = "flex"
+}) 
+     /*window.onload = function () {
+        document.querySelector(".textIntro").style.cssText = "color:black;transition:2s"   
+       }*/
+
+fadeText()
+window.addEventListener('scroll',transitionText)
+window.addEventListener('scroll',fadeText)
+</script>
 </body>
 </html>
