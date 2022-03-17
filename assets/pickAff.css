@@ -1,10 +1,9 @@
 
 body {
     height: 130vh;
-    
     font-size: 2.5rem;
     font-family:'Times New Roman', Times, serif;
-    background:url(background-gradient.jpg);
+    background-color: rgb(204, 114, 206);
     display: flex;
     justify-content: center;
     background-size: 100% 110%;
@@ -13,51 +12,14 @@ body {
     
     
 }
-.closeBtn {
-    background: none;
-    width: 10%;
-    cursor: pointer;
-    border: none;
-    position: relative;
-    top:0%;
-    right: -85%;
-    
-}
-.aboutAff {
-    background-color: rgb(255, 255, 255);
-    height: 35%;
-    width:80%;
-    z-index: 1;
-    font-size: 1.2rem;
-    position: absolute;
-    top: 20%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    border: rgb(156, 156, 156) 1px solid;
-}
-
-.aboutAff  h1 {
-    font-size: 1.6rem;
-    text-align: center;
-}
-.aboutAff p {
-    font-size: 1.7rem;
-    width: 90%;
-}
 
 .pickAffContainer {
-    
     margin-top: 0.5em;
     height: 50%;
     width: 80%;
-    
     padding: 0.2em;
     height: 100%;
     
-    
-
-
 }
 
 .pickAffContainer h2 {
@@ -76,10 +38,8 @@ body {
     grid-column-gap: 0.3em;
     grid-row-gap: 0.5em;
     justify-content: center;
-    margin-top:4em;
     margin-top: 5%;
-    
-    
+    margin-bottom: 5%;
 
 }
 .pickBtn button {
@@ -88,7 +48,7 @@ body {
     height: 7em;
     border: 0;
     font-size: 1.3rem;
-    border:0.01em solid rgb(250, 250, 250);
+    border:none;
     cursor: pointer;
     box-shadow: 0.05px 0.05px 2px;
     
@@ -96,19 +56,12 @@ body {
 .startBtn {
     cursor: pointer;
     border: 0;
-    border-radius: 1.2em;
-    width: 85%;
-    
-    height: 4%;
+    border-radius: 1.5em;
+    height: 10%;
     background:linear-gradient(to left,rgb(255, 255, 255),rgb(212, 241, 219),rgb(203, 219, 210));
-    position: relative;
-    top: 4%;
-    left:10%;
-    font-size: 1.1rem;
-
-
-    
-
+    font-size: 1.3rem;
+    display: flex;
+    margin: 0 auto;
 }
 .startBtn:hover {
     background:linear-gradient(to left,rgb(255, 255, 255),rgb(233, 250, 237),rgb(226, 247, 235));
@@ -141,7 +94,12 @@ body {
     background: linear-gradient(rgb(232, 255, 195),rgb(205, 255, 159, 0.575),rgb(133, 252, 222))
 }
 #createBtn {
-    background: linear-gradient(rgb(200,200,200),rgb(200,200,200),rgb(212, 148, 212));
+    background: linear-gradient(rgb(255, 231, 253),rgb(253, 191, 227),rgb(206, 135, 206));
     width: 210px;
+}
+#createBtn:hover {
+    background: linear-gradient(rgb(252, 232, 255),rgb(255, 199, 227),rgb(205, 137, 211));
+}
+@media (min-width:800px) {
     
 }

@@ -31,6 +31,11 @@ body {
     object-fit: cover;
     height: 100vh;
 }
+@media (min-width:500px) {
+    body {
+        background:linear-gradient(rgb(104, 141, 243),rgb(162, 211, 252),rgb(185, 216, 235));
+        }
+    }
 </style>
 <script>
 let affValue = localStorage.getItem("aff").split(",")

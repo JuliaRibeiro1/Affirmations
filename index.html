@@ -13,14 +13,8 @@
         <button>About us</button>
         <button>Contact us</button>
         <button class="specialBtn">Learn more</button>
-        <button class="listBtn"><img src="assets/list3.png" alt="list"></button>
    </nav>
        <header>
-           <div class="list">
-               <button>Home</button>
-               <button>Contact us</button>
-               <button>About us</button>
-           </div>
             <div class="intro">
                 <p class="textIntro">"Whether you think you can or you think you can't, you are right." <br> <span>-Henry Ford</span></p>
                 <a href="assets/pickAff.html"><button class="IcanBtn">I CAN</button></a>
@@ -71,28 +65,32 @@ function fadeText() {
        }
 }
 function transitionText() {
-        if(window.scrollY > 400) {
-            document.querySelector("#text1").style.cssText = "transform:-50%,-50%;color:black;transition:2s"
-            document.querySelector("#text2").style.cssText = "transform:-50%,-50%;color:black;transition:2s"  
-            document.querySelector("#text3").style.cssText = "transform:-50%,-50%color:black;transition:2s"
-            
-            
-        
+        if(window.scrollY > 300) {
+            document.querySelector("#text1").style.cssText = "transform:translate(-5%);color:black;transition:1s" 
     }
-    else {
+        if(window.scrollY > 600) {
+            document.querySelector("#text2").style.cssText = "transform:translate(-5%);color:black;transition:1s"  
+        }
+        if(window.scrollY > 800) {
+            document.querySelector("#text3").style.cssText = "transform:translate(-5%);color:black;transition:1s"
+        }
+        if(window.scrollY < 200) {
             document.querySelector("#text1").style.cssText = "transform:translate(10%);color:white;transition:2s"
             document.querySelector("#text2").style.cssText = "transform:translate(10%);color:white;transition:2s"  
             document.querySelector("#text3").style.cssText = "transform:translate(10%);color:white;transition:2s"
     }
 
 }
-document.querySelector('.listBtn').addEventListener('click',() => {
-    document.querySelector('.list').style.display = "flex"
-}) 
-     /*window.onload = function () {
-        document.querySelector(".textIntro").style.cssText = "color:black;transition:2s"   
-       }*/
-
+const navBtns = document.querySelectorAll("nav > button")
+for (let i = 0; i < navBtns.length; i++) {
+     navBtns[i].addEventListener("click", function() {
+        window.scrollTo({
+        top:1200,
+        left:0,
+        behavior:"smooth"
+    })
+})
+}    
 fadeText()
 window.addEventListener('scroll',transitionText)
 window.addEventListener('scroll',fadeText)

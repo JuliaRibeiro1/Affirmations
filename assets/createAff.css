@@ -4,7 +4,7 @@ body {
     height: 100vh;
     font-size: 30px;
     font-family:'Times New Roman', Times, serif;
-    background:url(background-gradient.jpg);
+    background-color:rgb(149, 58, 209);
     display: flex;
     justify-content: center;
     background-size: 100% 100%;
@@ -12,8 +12,9 @@ body {
 }
 .alert {
     background-color: rgb(255, 255, 255);
-    height: 35%;
-    width:80%;
+    height: 40%;
+    word-wrap: break-word;
+    width:85%;
     z-index: 1;
     font-size: 1.2rem;
     position: absolute;
@@ -41,7 +42,7 @@ body {
 }
 .createAffContainer {
     width: 80%;
-    height: 50%;
+    height: 60%;
     max-width: 500px;
     background-color: whitesmoke;
     background: linear-gradient(to right);
