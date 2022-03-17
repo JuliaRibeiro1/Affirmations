@@ -1,1 +1,1 @@
-# Random-picker
+# Believe it or not, affirmations are a way of manifesting what you want in your life. Therefore with my project you can choose love, health, wealth, sucess or write your own affirmations.Also, if you want to you can listen to relaxing music while saying your daily affirmations. 
